@@ -1,0 +1,13 @@
+aiogram
+loguru
+pydantic_settings
+# random
+# pathlib
+sqlmodel
+sqlalchemy
+pydantic
+# uuid
+# datetime
+aiosqlite
+greenlet
+asyncpg
