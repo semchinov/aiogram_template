@@ -32,8 +32,9 @@ async def handle_document(message: Message):
     """
     Handle document messages.
     """
+    file_name = message.document.file_name or "unnamed file"
     await message.answer(
-        f"📄 Document received: {message.document.file_name}"
+        f"📄 Document received: {file_name}"
     )
 
 

@@ -2,6 +2,7 @@
 Throttling middleware to prevent spam.
 """
 import logging
+import time
 from typing import Callable, Dict, Any, Awaitable
 
 from aiogram import BaseMiddleware
@@ -32,7 +33,6 @@ class ThrottlingMiddleware(BaseMiddleware):
         user: User = data.get("event_from_user")
         
         if user and isinstance(event, Message):
-            import time
             current_time = time.time()
             user_id = user.id
             

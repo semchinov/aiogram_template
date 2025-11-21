@@ -35,7 +35,17 @@ class Settings(BaseSettings):
         """Parse admin IDs from comma-separated string."""
         if not self.admins:
             return []
-        return [int(admin_id.strip()) for admin_id in self.admins.split(",") if admin_id.strip()]
+        
+        result = []
+        for admin_id in self.admins.split(","):
+            admin_id = admin_id.strip()
+            if admin_id:
+                try:
+                    result.append(int(admin_id))
+                except ValueError:
+                    # Skip invalid admin IDs
+                    continue
+        return result
 
 
 def get_settings() -> Settings:
