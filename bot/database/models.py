@@ -19,7 +19,7 @@ class Base(DeclarativeBase):
 
 
 class User(Base):
-    '''User model for storing user information.'''
+    \"\"\"User model for storing user information.\"\"\"
     __tablename__ = 'users'
     
     id: Mapped[int] = mapped_column(BigInteger, primary_key=True)

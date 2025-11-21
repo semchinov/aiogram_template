@@ -21,7 +21,7 @@ class ThrottlingMiddleware(BaseMiddleware):
     """
     
     def __init__(self, rate_limit: float = None):
-        self.rate_limit = rate_limit or settings.rate_limit
+        self.rate_limit = rate_limit if rate_limit is not None else settings.rate_limit
         self.user_timestamps: Dict[int, float] = {}
     
     async def __call__(
