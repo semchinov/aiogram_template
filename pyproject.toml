@@ -21,6 +21,12 @@ dependencies = [
     "poetry-plugin-shell (>=1.0.1,<2.0.0)"
 ]
 
+# Python base:
+#   random
+#   pathlib
+#   uuid
+#   datetime
+
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
