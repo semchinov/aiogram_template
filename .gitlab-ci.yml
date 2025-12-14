@@ -1,0 +1,4 @@
+stages:
+  - test
+  - build_image
+  - publish_image
