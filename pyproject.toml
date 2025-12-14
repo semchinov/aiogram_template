@@ -1,0 +1,17 @@
+[project]
+name = "aiogram-template"
+version = "0.2.0"
+description = "Aiogram template for telegram bot"
+authors = [
+    {name = "bearcolonel",email = "mikhail.semchinov@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "aiogram (>=3.23.0,<4.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
